@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="3" verbose="3" name="Test Suite" annotations="JDK" parallel="tests">
+
+    <test name="Login validation test case">
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+    <test name="Home page validation test case">
+        <classes>
+            <class name="tests.HomeTests"/>
+        </classes>
+    </test>
+    <test name="Product Details page validation test case">
+        <classes>
+            <class name="tests.ProductDetailsTest"/>
+        </classes>
+    </test>
+</suite>
