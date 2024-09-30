@@ -1,0 +1,15 @@
+{
+  "browserName": "chrome",
+  "version": "latest",
+  "platform": "ANY",
+  "seleniumProtocol": "WebDriver",
+  "chrome": {
+    "args": ["--headless"]
+  },
+  "firefox": {
+    "args": [""]
+  },
+  "edge": {
+    "args": ["--headless"]
+  }
+}

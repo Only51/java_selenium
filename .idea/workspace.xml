@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="17192276-1318-444e-921a-ba7297d68150" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverManagerChrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverManagerEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverManagerFirefox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/IDriverManagerInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/enums/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/BrowserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/BrowserProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Suite/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Suite/testNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProductDetailsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Browser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enums/Browser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Browser$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enums/Browser$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Browser$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enums/Browser$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enums/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factory/BrowserProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/factory/BrowserProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/SeleniumUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SeleniumUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProductDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProductDetailsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/HomeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/HomeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ProductDetailsTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2mksRNMQbEXEg66wa5TibBldMjk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Java_Selenium/java_selenium"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="driver" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.D:/Java_Selenium/java_selenium/src/test/Suite/testNG.xml">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="java_selenium" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="java_selenium" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Java_Selenium/java_selenium/src/test/Suite/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-factory" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/Suite/testNG.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomeTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/Java_Selenium/java_selenium/src/test/Suite/testNG.xml" />
+        <item itemvalue="TestNG.HomeTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17192276-1318-444e-921a-ba7297d68150" name="Changes" comment="" />
+      <created>1727631902430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727631902430</updated>
+    </task>
+    <servers />
+  </component>
+</project>

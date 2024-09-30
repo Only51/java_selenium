@@ -1,20 +1,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite thread-count="3" verbose="3" name="Test Suite" annotations="JDK" parallel="tests">
-
-    <test name="Login validation test case">
-        <classes>
-            <class name="tests.LoginTests"/>
-        </classes>
-    </test>
-    <test name="Home page validation test case">
+    <test name="Home page validation test case on chrome">
+        <parameter name="browser" value="chrome" />
         <classes>
             <class name="tests.HomeTests"/>
         </classes>
     </test>
-    <test name="Product Details page validation test case">
+
+    <test name="Home page validation test case o firefox">
+        <parameter name="browser" value="firefox" />
         <classes>
-            <class name="tests.ProductDetailsTest"/>
+            <class name="tests.HomeTests"/>
+        </classes>
+    </test>
+
+    <test name="Home page validation test case o edge">
+        <parameter name="browser" value="edge" />
+        <classes>
+            <class name="tests.HomeTests"/>
         </classes>
     </test>
 </suite>
