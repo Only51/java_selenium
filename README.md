@@ -127,4 +127,11 @@ SeleniumUtils.waitForElementToBeVisible(driver, xpath);
 SeleniumUtils.waitForElementToBeInvisible(driver, xpath);
 ```
 
+## Execution on MacOS
+
+Open terminal and run the command
+
+```java
+xattr -d com.apple.quarantine <name-of-executable>
+```
 

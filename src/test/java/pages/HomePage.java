@@ -9,6 +9,8 @@ public class HomePage extends BasePage {
     private String chkDoNotDisplayFor1Days = "//label[text()='Do not display for 1 days']";
 //    private String chkDoNotDisplayFor1Days = "//input[@type='checkbox' and @id='common-popup-checkbox-skip-0']";
     private String dlgDiscount = "//div[ @id='common-popup-wrapper']";
+    private String txtSearchGame = "//input[@placeholder='Search Games']";
+    private String linkLordNineGame = "//a[contains(.,'Lord Nine')]";
     /**
      * Constructor of the page. Initialize the Page Factory objects.
      *
@@ -27,6 +29,19 @@ public class HomePage extends BasePage {
         boolean isDisplay = false;
         WebElement dlg = SeleniumUtils.findElement(driver,dlgDiscount);
         if(dlg != null){
+            isDisplay = true;
+        }
+        return isDisplay;
+    }
+
+    public void searchGame(String value){
+        enter(txtSearchGame, value);
+    }
+
+    public boolean isLordNineDisplay(){
+        boolean isDisplay = false;
+        WebElement linkLordNine = SeleniumUtils.findElement(driver,linkLordNineGame);
+        if(linkLordNine != null){
             isDisplay = true;
         }
         return isDisplay;

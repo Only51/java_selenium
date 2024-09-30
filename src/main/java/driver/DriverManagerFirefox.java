@@ -16,9 +16,10 @@ import java.io.IOException;
 public class DriverManagerFirefox implements IDriverManagerInterface{
     @Override
     public WebDriver createDriver(JsonNode capabilities) {
-        String fileSeparator = File.separator;
-        String driverPath = System.getProperty("user.dir") +Constant.PATH_DRIVER.replace("/",fileSeparator) + "geckodriver.exe";
-        System.setProperty("webdriver.gecko.driver", driverPath);
+//        String fileSeparator = File.separator;
+//        String driverPath = System.getProperty("user.dir") +Constant.PATH_DRIVER.replace("/",fileSeparator) + "geckodriver";
+//        System.setProperty("webdriver.gecko.driver", driverPath);
+        WebDriverManager.firefoxdriver().setup();
         WebDriver driver;
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         for (JsonNode arg : capabilities.get("firefox").get("args")) {

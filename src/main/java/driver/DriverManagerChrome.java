@@ -14,14 +14,15 @@ import java.io.IOException;
 public class DriverManagerChrome implements IDriverManagerInterface{
     @Override
     public WebDriver createDriver(JsonNode capabilities) {
-        String fileSeparator = File.separator;
-        String driverPath = System.getProperty("user.dir") +Constant.PATH_DRIVER.replace("/",fileSeparator) + "chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", driverPath);
+//        String fileSeparator = File.separator;
+//        String driverPath = System.getProperty("user.dir") +Constant.PATH_DRIVER.replace("/",fileSeparator) + "chromedriver";
+//        System.setProperty("webdriver.chrome.driver", driverPath);
+        WebDriverManager.chromedriver().setup();
         WebDriver driver;
         ChromeOptions chromeOptions = new ChromeOptions();
-        for (JsonNode arg : capabilities.get("chrome").get("args")) {
-            chromeOptions.addArguments(arg.asText());
-        }
+//        for (JsonNode arg : capabilities.get("chrome").get("args")) {
+//            chromeOptions.addArguments(arg.asText());
+//        }
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         return driver;

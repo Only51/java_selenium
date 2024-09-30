@@ -14,6 +14,7 @@ public class BaseTest {
     WebDriver driver;
     String screenShotPath = "";
     Report reportUtils = new Report();
+
     @BeforeMethod
     @Parameters("browser")
     public void init(@Optional String browser) {
@@ -23,9 +24,9 @@ public class BaseTest {
         reportUtils.startReporter(browser);
     }
 
-    @AfterMethod
+    @AfterTest
     public void getResult(ITestResult result) throws IOException {
-        screenShotPath = reportUtils.capture(driver);
+        screenShotPath = Report.capture(driver);
         if(result.getStatus() == ITestResult.FAILURE) {
             reportUtils.extentTest.log(Status.FAIL,result.getThrowable());
         }
@@ -37,7 +38,7 @@ public class BaseTest {
         }
         reportUtils.extentTest.addScreenCaptureFromPath(screenShotPath);
     }
-    @AfterTest
+    @AfterMethod
     public void tearDown() throws IOException {
         //to write or update test information to the reporter
         reportUtils.extentReports.flush();

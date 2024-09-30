@@ -4,7 +4,7 @@
   "platform": "ANY",
   "seleniumProtocol": "WebDriver",
   "chrome": {
-    "args": ["--headless"]
+    "args": [""]
   },
   "firefox": {
     "args": [""]

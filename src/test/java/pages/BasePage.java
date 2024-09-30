@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import utils.SeleniumUtils;
 
 /**
  * Class to be extended by all Page Objects Model (POM) classes.
@@ -28,5 +29,10 @@ public class BasePage {
 
 	public void refreshPage(){
 		driver.navigate().refresh();
+	}
+
+	public void enter(String element, String value){
+		SeleniumUtils.waitForElementToBeVisible(driver,element).clear();
+		SeleniumUtils.waitForElementToBeVisible(driver,element).sendKeys(value);
 	}
 }

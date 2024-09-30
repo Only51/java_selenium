@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import driver.DriverManagerChrome;
 import driver.DriverManagerEdge;
 import driver.DriverManagerFirefox;
+import driver.DriverManagerSafari;
 import org.openqa.selenium.WebDriver;
 
 import utils.Constant;
@@ -44,6 +45,9 @@ public class BrowserProvider {
             }
             case "edge" : {
                 return new DriverManagerEdge().createDriver(capabilities);
+            }
+            case "safari" : {
+                return new DriverManagerSafari().createDriver(capabilities);
             }
             default : throw new IllegalArgumentException("Invalid Driver: " + driverType);
         }
