@@ -14,10 +14,7 @@ import java.io.File;
 public class DriverManagerEdge implements IDriverManagerInterface{
     @Override
     public WebDriver createDriver(JsonNode capabilities) {
-        String fileSeparator = File.separator;
-        String driverPath = System.getProperty("user.dir") +Constant.PATH_DRIVER.replace("/",fileSeparator) + "msedgedriver.exe";
-        System.setProperty("webdriver.edge.driver", driverPath);
-//        WebDriverManager.edgedriver().setup();
+        WebDriverManager.edgedriver().setup();
         WebDriver driver;
         EdgeOptions edgeOptions = new EdgeOptions();
         for (JsonNode arg : capabilities.get("firefox").get("args")) {

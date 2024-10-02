@@ -7,25 +7,28 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import utils.Constant;
 import utils.Report;
-
 import java.io.IOException;
 
 public class BaseTest {
     WebDriver driver;
     String screenShotPath = "";
     Report reportUtils = new Report();
+    String browserName = "";
 
-    @BeforeMethod
+    @BeforeTest
     @Parameters("browser")
-    public void init(@Optional String browser) {
-        driver = BrowserProvider.createDriver(browser);
+    public void init(@Optional("chrome") String browser) {
+        this.browserName = browser;
+        reportUtils.startReporter(browserName);
+    }
+    @BeforeMethod
+    public void openWeb(){
+        driver = BrowserProvider.createDriver(browserName);
         driver.manage().window().maximize();
         driver.get(Constant.BASE_URL);
-        reportUtils.startReporter(browser);
     }
-
-    @AfterTest
-    public void getResult(ITestResult result) throws IOException {
+    @AfterMethod
+    public void tearDown(ITestResult result) throws IOException {
         screenShotPath = Report.capture(driver);
         if(result.getStatus() == ITestResult.FAILURE) {
             reportUtils.extentTest.log(Status.FAIL,result.getThrowable());
@@ -37,20 +40,14 @@ public class BaseTest {
             reportUtils.extentTest.log(Status.SKIP, result.getTestName());
         }
         reportUtils.extentTest.addScreenCaptureFromPath(screenShotPath);
-    }
-    @AfterMethod
-    public void tearDown() throws IOException {
-        //to write or update test information to the reporter
-        reportUtils.extentReports.flush();
-        quitDriver();
-    }
 
-//    /**
-//     * This method will be executed at the end of the test.
-//     */
-    public void quitDriver() throws IOException {
         driver.quit();
         driver = null;
+    }
+    @AfterTest
+    public void flushReport() throws IOException {
+        //to write or update test information to the reporter
+        reportUtils.extentReports.flush();
     }
 
 }

@@ -32,9 +32,6 @@ public class BrowserProvider {
     }
     public static WebDriver createDriver(String driverType) {
         JsonNode capabilities = loadCapabilities();
-        if(driverType == null){
-            driverType = "chrome";
-        }
         switch (driverType.toLowerCase()) {
 
             case "chrome" : {

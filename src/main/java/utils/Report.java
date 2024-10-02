@@ -9,7 +9,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
+import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -34,9 +38,9 @@ public class Report {
 
         //configuration items to change the look and feel
         //add content, manage tests etc
-        extentSparkReporter.config().setDocumentTitle("Simple Automation Report");
+        extentSparkReporter.config().setDocumentTitle(Constant.REPORT_TITLE);
         extentSparkReporter.config().setReportName("Test Report");
-        extentSparkReporter.config().setTheme(Theme.STANDARD);
+        extentSparkReporter.config().setTheme(Theme.DARK);
         extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
     }
 
@@ -66,11 +70,15 @@ public class Report {
 
     public static String capture(WebDriver driver) throws IOException {
 
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File Dest = new File("src/test-output/screenshot" + System.currentTimeMillis()
-                + ".png");
-        String errflpath = Dest.getAbsolutePath();
-        FileUtils.copyFile(scrFile, Dest);
-        return errflpath;
+        Screenshot s =new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
+        String imgPath = System.getProperty("user.dir") +"/src/test-output/screenshot" + System.currentTimeMillis()
+                + ".png";
+        ImageIO.write(s.getImage(),"PNG",new File(imgPath));
+//        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//        File Dest = new File("src/test-output/screenshot" + System.currentTimeMillis()
+//                + ".png");
+//        String errflpath = Dest.getAbsolutePath();
+//        FileUtils.copyFile(scrFile, Dest);
+        return imgPath;
     }
 }

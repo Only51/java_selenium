@@ -3,9 +3,6 @@ package tests;
 import com.aventstack.extentreports.Status;
 import org.testng.annotations.*;
 import pages.HomePage;
-
-
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 
 public class HomeTests  extends BaseTest{
