@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.SeleniumUtils;
@@ -11,6 +12,7 @@ public class HomePage extends BasePage {
     private String dlgDiscount = "//div[ @id='common-popup-wrapper']";
     private String txtSearchGame = "//input[@placeholder='Search Games']";
     private String linkLordNineGame = "//a[contains(.,'Lord Nine')]";
+    private String btnSearch = "//button[contains(@class,'stds-search-field-search-button')]";
     /**
      * Constructor of the page. Initialize the Page Factory objects.
      *
@@ -38,6 +40,9 @@ public class HomePage extends BasePage {
         enter(txtSearchGame, value);
     }
 
+    public void enterSearch(){
+        SeleniumUtils.waitForElementToBeVisible(driver,txtSearchGame).sendKeys(Keys.ENTER);
+    }
     public boolean isLordNineDisplay(){
         boolean isDisplay = false;
         WebElement linkLordNine = SeleniumUtils.findElement(driver,linkLordNineGame);
@@ -47,4 +52,7 @@ public class HomePage extends BasePage {
         return isDisplay;
     }
 
+    public void clickSearchButton(){
+        SeleniumUtils.waitForElementToBeClickable(driver,btnSearch).click();
+    }
 }

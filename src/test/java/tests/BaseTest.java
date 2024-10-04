@@ -8,6 +8,8 @@ import org.testng.annotations.*;
 import utils.Constant;
 import utils.Report;
 import java.io.IOException;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     WebDriver driver;
@@ -25,6 +27,8 @@ public class BaseTest {
     public void openWeb(){
         driver = BrowserProvider.createDriver(browserName);
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
         driver.get(Constant.BASE_URL);
     }
     @AfterMethod
